@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 &middot; 비트뿜뿜 라이브 자동화</title>
+<meta name="description" content="비트뿜뿜 라이브 자동화 도구의 개인정보처리방침입니다. 수집하는 정보, 보관 위치, 제3자 제공 여부를 설명합니다.">
+<link rel="stylesheet" href="_style.css">
+<body>
+<div class="wrap">
+
+<h1>개인정보처리방침</h1>
+<p class="sub">
+  비트뿜뿜 라이브 자동화 (BBP Live Autostart)<br>
+  시행일 2026년 10월 8일 &middot; Privacy Policy, effective 8 October 2026
+</p>
+
+<nav>
+  <a href="index.html">홈</a>
+  <a href="terms.html">서비스 약관</a>
+</nav>
+
+<div class="card">
+<strong>요약</strong><br>
+이 도구는 운영자 본인의 PC에서만 돌아가며, 다른 사람의 정보를 수집하지
+않습니다. 유튜브 인증 토큰은 그 PC 안에만 저장되고 어디로도 전송되지
+않습니다. 제3자에게 제공하거나 판매하지 않습니다.
+<br><br>
+<span class="en">
+<strong>Summary.</strong> This tool runs only on the operator's own PC.
+It collects no information from anyone else. The YouTube authorization
+token is stored on that PC and is never transmitted anywhere else.
+Nothing is sold or shared with third parties.
+</span>
+</div>
+
+<h2 class="first">1. 이 도구는 무엇인가</h2>
+<p>
+유튜브 채널 <strong>비트뿜뿜</strong>의 24시간 라이브 방송을 끊김 없이
+이어주는 개인용 프로그램입니다. 채널 소유자 본인이 자신의 PC에서
+직접 실행합니다. 배포하지 않으며 다른 이용자가 없습니다.
+</p>
+<p class="en">
+A personal program that keeps the YouTube channel's 24/7 live stream
+running. The channel owner runs it on their own computer. It is not
+distributed and has no other users.
+</p>
+
+<h2>2. 수집하는 정보</h2>
+<p><strong>이 도구는 이용자로부터 어떤 개인정보도 수집하지 않습니다.</strong></p>
+<p>동작을 위해 아래 두 가지가 운영자 PC에 저장됩니다.</p>
+<ul>
+  <li>
+    <strong>구글 OAuth 인증 토큰</strong> &mdash; 운영자 본인의 유튜브
+    계정으로 방송을 만들 수 있게 해주는 자격 증명입니다.
+    <code>token.json</code> 파일로 운영자 PC에만 저장됩니다.
+  </li>
+  <li>
+    <strong>동작 기록(로그)</strong> &mdash; 방송 생성 시각, 성공 여부,
+    오류 내용. <code>live_autostart.log</code> 파일로 운영자 PC에만
+    저장됩니다. 개인정보는 들어가지 않습니다.
+  </li>
+</ul>
+<p class="en">
+No personal data is collected from any user. Two files are kept on the
+operator's own PC: a Google OAuth token (<code>token.json</code>) and an
+operation log (<code>live_autostart.log</code>). Neither leaves that PC.
+</p>
+
+<h2>3. 사용하는 구글 API 권한</h2>
+<p>아래 범위 하나만 요청합니다.</p>
+<div class="card">
+  <code>https://www.googleapis.com/auth/youtube</code>
+</div>
+<p>이 권한은 오직 다음 용도로만 쓰입니다.</p>
+<ul>
+  <li>운영자 본인 채널에 라이브 방송을 만드는 일</li>
+  <li>만든 방송을 송출 스트림에 연결하는 일</li>
+  <li>방송을 시작하고 종료하는 일</li>
+  <li>이미 켜져 있는 방송이 있는지 확인하는 일</li>
+</ul>
+<p>
+<strong>구독자 정보, 시청자 정보, 댓글, 수익 정보는 읽지 않습니다.</strong>
+영상을 삭제하지 않으며, 다른 채널에는 접근하지 않습니다.
+</p>
+<p class="en">
+The <code>youtube</code> scope is used solely to create, bind, start and
+stop live broadcasts on the operator's own channel, and to check whether
+one is already running. Subscriber data, viewer data, comments and
+revenue data are never read. Nothing is deleted. No other channel is
+accessed.
+</p>
+
+<h2>4. 보관과 전송</h2>
+<ul>
+  <li>토큰과 로그는 <strong>운영자 PC에만</strong> 저장됩니다.</li>
+  <li>서버로 보내지 않습니다. 이 도구에는 서버가 없습니다.</li>
+  <li>통신은 구글 API 서버와만 이루어집니다.</li>
+  <li>분석 도구, 광고 추적, 쿠키를 쓰지 않습니다.</li>
+</ul>
+<p class="en">
+Everything stays on the operator's PC. There is no server. The only
+outbound connection is to Google's API. No analytics, no ad tracking,
+no cookies.
+</p>
+
+<h2>5. 제3자 제공</h2>
+<p>
+<strong>어떤 정보도 제3자에게 제공하거나 판매하지 않습니다.</strong>
+구글 외의 외부 서비스와 연동하지 않습니다.
+</p>
+<p class="en">
+Nothing is shared with or sold to any third party. No integration with
+any service other than Google.
+</p>
+
+<h2>6. 보관 기간과 삭제</h2>
+<p>
+토큰과 로그는 운영자가 파일을 지우면 즉시 사라집니다.
+접근 권한은 아래에서 언제든 철회할 수 있습니다.
+</p>
+<div class="card">
+  <a href="https://myaccount.google.com/permissions">
+    myaccount.google.com/permissions
+  </a>
+</div>
+<p class="en">
+Deleting the files removes the data immediately. Access can be revoked
+at any time at the link above.
+</p>
+
+<h2>7. 아동 정보</h2>
+<p>
+이 도구는 운영자 본인만 사용하며, 만 14세 미만 아동을 포함한
+어떤 이용자로부터도 정보를 수집하지 않습니다.
+</p>
+
+<h2>8. 방침 변경</h2>
+<p>
+방침이 바뀌면 이 페이지를 고치고 시행일을 갱신합니다.
+</p>
+
+<h2>9. 연락처</h2>
+<p>
+개인정보 관련 문의:
+<a href="mailto:youngsamshin13@gmail.com">youngsamshin13@gmail.com</a>
+</p>
+
+<footer>
+  비트뿜뿜 라이브 자동화 &middot; 시행일 2026년 10월 8일
+</footer>
+
+</div>
+</body>
+</html>
